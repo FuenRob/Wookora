@@ -10,7 +10,6 @@ a single core of php.
 * Core functions: PHP
 
 Controllers call the core via AJAX's web services and return array data in JSON.
---------
 
 Server configuration
 --------
@@ -20,4 +19,3 @@ You need to have installed:
 * PHP 5.2+
 * phpMyAdmin
 * Bower
---------
