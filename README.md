@@ -1,6 +1,6 @@
 # Wookora
 
-About PrestaShop
+About Wookora
 --------
 Wookora is a framework based in Bootstrap with JS's controllers and PHP's core that allows to manage multiple views with 
 a single core of php.
