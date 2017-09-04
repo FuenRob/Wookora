@@ -1,11 +1,4 @@
 <?php
-
-// Includes files for configuration, database functions, logs and mails
-require ('config.php');
-require ('db.php');
-require ('log.php');
-require ('PHPMailer/class.phpmailer.php');
-
 // Class with all functions
 class Core
 {

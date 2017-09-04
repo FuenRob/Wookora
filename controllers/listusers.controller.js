@@ -2,7 +2,15 @@ $(function() {
     var session = Cookies.get('session_us');
     if(!session){
         window.location.href = "login.html"
+    }else{
+        $('#navLogout').hide();
+        $('#navLogin').show();
     }
+    
+    $('#logout').on('click', function (e) {
+        Cookies.remove('session_us');
+        location.reload();
+    });
     var action = "userlist";
     $.ajax({
         type: 'POST',
@@ -11,7 +19,7 @@ $(function() {
         data: 'action=' + action,
         success: function (data) {
             $.each(data, function(index) {
-                $('#tbody').append("<tr><td>"+data[index].id+"</td><td>"+data[index].name+"</td><td>"+data[index].email+"</td><td>"+data[index].dateCreation+"</td></tr>")
+                $('#tbody').append("<tr><td>"+data[index].name+"</td><td>"+data[index].email+"</td><td>"+data[index].dateCreation+"</td></tr>")
             });
         },
         error: function (data) {

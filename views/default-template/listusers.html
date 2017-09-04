@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Roberto Morais">
-    <link rel="icon" href="../favicon.ico">
+    <link rel="icon" href="../../favicon.ico">
 
-    <title>Wookora</title>
+    <title>Wookora - Users</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="../assets/css/starter-template.css" rel="stylesheet">
+    <link href="../../assets/css/starter-template.css" rel="stylesheet">
   </head>
 
   <body>
@@ -26,7 +26,7 @@
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto col-md-10">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
           </li>
         </ul>
@@ -38,9 +38,12 @@
             <a class="nav-link" href="register.html">Register</a>
           </li>
         </ul>
-        <ul class="navbar-nav mr-auto col-md-2" id="navLogin" style="display: none;">
-          <li class="nav-item">
+        <ul class="navbar-nav mr-auto col-md-2" id="navLogin">
+          <li class="nav-item active">
             <a class="nav-link" href="listusers.html">User List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="convertxml.html">Convert to XML</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#" id="logout">Logout</a>
@@ -52,25 +55,66 @@
     <div class="container">
 
       <div class="starter-template">
-        <h1 id="title"></h1>
-        <p class="lead" id="body"></p>
+          <row>
+              <h1></h1>
+          </row>
+          <row>
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Fecha de creación</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tbody">
+                    </tbody>
+                </table>
+          </row>
+          
       </div>
 
     </div><!-- /.container -->
+    <footer class="footer">
+        <div class="container">
+            <center><span class="text-muted">Powered by Roberto Morais</span></center>
+        </div>
+    </footer>
+    <!-- Modal -->
+    <div id="modal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title" id="titleStatus"></h4>
+          </div>
+          <div class="modal-body">
+            <p id="status"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
     <!-- Components -->
-    <script src="../bower_components/js-cookie/src/js.cookie.js"></script>
+    <script src="../../bower_components/js-cookie/src/js.cookie.js"></script>
     <!-- CONTROLLER -->
-    <script src="../controllers/index.controller.js"></script>
+    <script src="../../controllers/listusers.controller.js"></script>
   </body>
 </html>

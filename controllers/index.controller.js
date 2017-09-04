@@ -13,6 +13,7 @@ $(function() {
         Cookies.remove('session_us');
         location.reload();
     });
+    
 });
 
 

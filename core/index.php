@@ -1,4 +1,9 @@
 <?php
+// Includes files for configuration, database functions, logs and mails
+require ('config.php');
+require ('db.php');
+require ('log.php');
+require ('PHPMailer/class.phpmailer.php');
 //Include core actions
 include('functions.php');
 
@@ -7,9 +12,14 @@ include('functions.php');
 if(isset($_POST['action'])){
     $action = $_POST['action'];
 }else{
-    print_r('Error: Action empty');
-    exit();
+    //$array = array(0,"Oops... We have a problem","Action can't be null.");
+    //echo $state = json_encode($array);
+    print_r("Action can't be null.");
+    exit;
 }
+
+//Include modules
+include('modules.php');
 
 if(isset($_POST['username'])){
     $username = $_POST['username'];
@@ -75,10 +85,6 @@ if(isset($_POST['postalcode'])){
     $postalcode = null;
 }
 
-if(isset($_COOKIE['session_us'])){
-    $id_user = $_COOKIE['session_us'];
-}
-
 if(isset($_POST['date'])){
     $date = $_POST['date'];
 }
@@ -87,6 +93,11 @@ if(isset($_POST['passport'])){
     $passport = $_POST['passport'];
 }else{
     $passport = null;
+}
+
+// Type Cookie
+if(isset($_COOKIE['session_us'])){
+    $id_user = $_COOKIE['session_us'];
 }
 
 //Named class for the functions
