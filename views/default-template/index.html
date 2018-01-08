@@ -1,53 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Roberto Morais">
-    <link rel="icon" href="../../favicon.ico">
-
-    <title>Wookora</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="../../assets/css/starter-template.css" rel="stylesheet">
-  </head>
-
+  
+  <woo-include page="_partials/header.html"></woo-include>
+  
   <body>
 
-    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">LOGO</a>
-
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto col-md-10">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-          </li>
-        </ul>
-        <ul class="navbar-nav mr-auto col-md-2" id="navLogout">
-          <li class="nav-item">
-            <a class="nav-link" href="login.html">Login</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="register.html">Register</a>
-          </li>
-        </ul>
-        <ul class="navbar-nav mr-auto col-md-2" id="navLogin">
-          <li class="nav-item">
-            <a class="nav-link" href="listusers.html">User List</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" id="logout">Logout</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <woo-include page="_partials/menu.html"></woo-include>
+    
     <div class="container">
         <div class="starter-template">
           <h1 id="title"></h1>
@@ -55,11 +14,9 @@
         </div>
         
     </div><!-- /.container -->
-    <footer class="footer">
-        <div class="container">
-            <center><span class="text-muted">Powered by Roberto Morais</span></center>
-        </div>
-    </footer>
+    
+    <woo-include page="_partials/footer.html"></woo-include>
+    
     <!-- Modal -->
     <div id="modal" class="modal fade" role="dialog">
       <div class="modal-dialog">
@@ -89,6 +46,7 @@
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="../../assets/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/wookora.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
     <!-- Components -->
